@@ -1,0 +1,45 @@
+﻿<Window x:Name="loades" x:Class="WpfApp8.WinOficina"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp8"
+        mc:Ignorable="d"
+        Title="WinOficina" Height="450" Width="800"
+        Background="{DynamicResource MaterialDesignPaper}"
+        Foreground="{DynamicResource MaterialDesignBody}"
+        WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        BorderBrush="#002626" BorderThickness="1" Loaded="loades_Loaded" >
+    <Grid>
+        <StackPanel>
+            <Grid Height="30" Background="#002626">
+                <Button x:Name="btnClose" Width="30" Height="30" HorizontalAlignment="Right"
+                 VerticalAlignment="Center" BorderThickness="0" Background="Transparent" Click="btnClose_Click" Padding="0">
+                    <materialDesign:PackIcon Kind="CloseBox" Width="20" Height="20" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"   />
+                </Button>
+            </Grid>
+            <TextBlock HorizontalAlignment="Center" FontSize= "22" FontWeight="Bold" Foreground="{DynamicResource MaterialDesignBody}"><Run Text="ADMINISTRACION DE OFICINAS"/></TextBlock>
+
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Label Content="Nombre:"/>
+                <TextBox x:Name="txb_name" Width="300" IsEnabled="False"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Label Content="Direccion:"/>
+                <TextBox x:Name="txb_oficina" Width="300" IsEnabled="False"/>
+            </StackPanel>
+
+            <DataGrid x:Name="dgvData" Height="200" Margin="10" >
+
+            </DataGrid>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10 0 0">
+                <Button x:Name="btn_Insert" Content="INSERTAR" Width="120" Margin="10 0 10 0" Click="btn_Insert_Click"/>
+                <Button x:Name="btn_Mod" Content="MODIFICAR" Width="120" Margin="10 0 10 0" Click="btn_Mod_Click"/>
+                <Button x:Name="btn_Del" Content="ELIMINAR" Width="120" Margin="10 0 10 0" Click="btn_Del_Click"/>
+                <Button x:Name="btn_Save" Content="GUARDAR" Width="120" Margin="10 0 10 0" IsEnabled="False" Click="btn_Save_Click"/>
+                <Button x:Name="btn_Cancel" Content="CANCELAR" Width="120" Margin="10 0 10 0" IsEnabled="False" Click="btn_Cancel_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
